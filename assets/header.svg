@@ -1,54 +1,84 @@
-<svg width="1000" height="300" viewBox="0 0 1000 300" fill="none" xmlns="http://www.w3.org/2000/svg">
+<svg width="1200" height="360" viewBox="0 0 1200 360" fill="none" xmlns="http://www.w3.org/2000/svg">
   <defs>
-    <linearGradient id="line" x1="180" y1="0" x2="820" y2="0" gradientUnits="userSpaceOnUse">
-      <stop stop-color="#30363D" stop-opacity="0"/>
-      <stop offset="0.5" stop-color="#8B949E"/>
-      <stop offset="1" stop-color="#30363D" stop-opacity="0"/>
+    <linearGradient id="panel" x1="0" y1="0" x2="1200" y2="360" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#0D1117"/>
+      <stop offset="0.5" stop-color="#111820"/>
+      <stop offset="1" stop-color="#0D1117"/>
     </linearGradient>
-    <radialGradient id="halo">
+    <linearGradient id="accent" x1="190" y1="70" x2="1010" y2="290" gradientUnits="userSpaceOnUse">
       <stop stop-color="#58A6FF" stop-opacity="0.12"/>
-      <stop offset="1" stop-color="#58A6FF" stop-opacity="0"/>
-    </radialGradient>
-    <filter id="glow" x="-100%" y="-100%" width="300%" height="300%">
-      <feGaussianBlur stdDeviation="4" result="blur"/>
-      <feMerge>
-        <feMergeNode in="blur"/>
-        <feMergeNode in="SourceGraphic"/>
-      </feMerge>
+      <stop offset="0.5" stop-color="#58A6FF" stop-opacity="0.9"/>
+      <stop offset="1" stop-color="#58A6FF" stop-opacity="0.12"/>
+    </linearGradient>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M40 0H0V40" stroke="#30363D" stroke-width="0.6" opacity="0.35"/>
+    </pattern>
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="5" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
     </filter>
+    <clipPath id="frame">
+      <path d="M24 0H1176L1200 24V336L1176 360H24L0 336V24L24 0Z"/>
+    </clipPath>
   </defs>
 
-  <circle cx="500" cy="135" r="132" fill="url(#halo)">
-    <animate attributeName="r" values="118;132;118" dur="8s" repeatCount="indefinite"/>
-    <animate attributeName="opacity" values="0.55;1;0.55" dur="8s" repeatCount="indefinite"/>
-  </circle>
+  <g clip-path="url(#frame)">
+    <rect width="1200" height="360" fill="url(#panel)"/>
+    <rect width="1200" height="360" fill="url(#grid)"/>
 
-  <g transform="translate(500 135)" stroke="#30363D">
-    <circle r="104" stroke-width="1" stroke-dasharray="2 9">
-      <animateTransform attributeName="transform" type="rotate" from="0" to="360" dur="45s" repeatCount="indefinite"/>
-    </circle>
-    <circle r="82" stroke-width="1" stroke-dasharray="24 10 2 10">
-      <animateTransform attributeName="transform" type="rotate" from="360" to="0" dur="32s" repeatCount="indefinite"/>
-    </circle>
-    <circle r="60" stroke="#484F58" stroke-width="1"/>
-
-    <g>
-      <animateTransform attributeName="transform" type="rotate" from="0" to="360" dur="12s" repeatCount="indefinite"/>
-      <circle cy="-104" r="3.5" fill="#58A6FF" stroke="none" filter="url(#glow)"/>
+    <g opacity="0.5">
+      <path d="M-70 335L175 25L420 335H-70Z" stroke="#30363D" stroke-width="1.2"/>
+      <path d="M780 335L1025 25L1270 335H780Z" stroke="#30363D" stroke-width="1.2"/>
+      <path d="M48 292L176 76L304 292H48Z" stroke="#58A6FF" stroke-width="0.8" opacity="0.45"/>
+      <path d="M896 292L1024 76L1152 292H896Z" stroke="#58A6FF" stroke-width="0.8" opacity="0.45"/>
     </g>
-    <g>
-      <animateTransform attributeName="transform" type="rotate" from="360" to="0" dur="18s" repeatCount="indefinite"/>
-      <circle cy="-82" r="2.5" fill="#8B949E" stroke="none"/>
+
+    <g opacity="0.65" fill="none" stroke="#58A6FF" stroke-width="1.2">
+      <path d="M-40 272L176 56L392 272">
+        <animate attributeName="d" values="M-40 272L176 56L392 272;M-20 292L176 76L372 292;M-40 272L176 56L392 272" dur="9s" repeatCount="indefinite"/>
+      </path>
+      <path d="M808 272L1024 56L1240 272">
+        <animate attributeName="d" values="M808 272L1024 56L1240 272;M828 292L1024 76L1220 292;M808 272L1024 56L1240 272" dur="9s" repeatCount="indefinite"/>
+      </path>
+    </g>
+
+    <path d="M170 180H430" stroke="url(#accent)" stroke-width="1" stroke-dasharray="4 8">
+      <animate attributeName="stroke-dashoffset" values="0;-48" dur="4s" repeatCount="indefinite"/>
+    </path>
+    <path d="M770 180H1030" stroke="url(#accent)" stroke-width="1" stroke-dasharray="4 8">
+      <animate attributeName="stroke-dashoffset" values="0;48" dur="4s" repeatCount="indefinite"/>
+    </path>
+
+    <polygon points="600,42 720,180 600,318 480,180" fill="#0D1117" stroke="#30363D"/>
+    <polygon points="600,67 698,180 600,293 502,180" fill="none" stroke="#58A6FF" stroke-opacity="0.35"/>
+    <polygon points="600,91 677,180 600,269 523,180" fill="none" stroke="#484F58" stroke-dasharray="3 7">
+      <animate attributeName="stroke-dashoffset" values="0;40" dur="8s" repeatCount="indefinite"/>
+    </polygon>
+
+    <circle cx="600" cy="67" r="3" fill="#58A6FF" filter="url(#glow)">
+      <animate attributeName="opacity" values="0.35;1;0.35" dur="2.8s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="698" cy="180" r="2" fill="#8B949E"/>
+    <circle cx="600" cy="293" r="2" fill="#8B949E"/>
+    <circle cx="502" cy="180" r="2" fill="#8B949E"/>
+
+    <text x="600" y="169" fill="#F0F6FC" text-anchor="middle" font-family="Segoe UI, Inter, Arial, sans-serif" font-size="38" font-weight="650" letter-spacing="10">FELIAN</text>
+    <text x="600" y="199" fill="#8B949E" text-anchor="middle" font-family="Consolas, SFMono-Regular, monospace" font-size="11" letter-spacing="3">LOW-LEVEL SYSTEMS DEVELOPER</text>
+
+    <g font-family="Consolas, SFMono-Regular, monospace" font-size="10" fill="#8B949E" letter-spacing="2">
+      <text x="42" y="42">01 / SYSTEMS</text>
+      <text x="42" y="322">C++ · WINAPI · RUNTIME</text>
+      <text x="1158" y="42" text-anchor="end">02 / NETWORK</text>
+      <text x="1158" y="322" text-anchor="end">CLIENT · SERVER · PROTOCOL</text>
+    </g>
+
+    <g stroke="#58A6FF" stroke-width="1.2">
+      <path d="M0 62H82M0 62V0"/>
+      <path d="M1200 62H1118M1200 62V0"/>
+      <path d="M0 298H82M0 298V360"/>
+      <path d="M1200 298H1118M1200 298V360"/>
     </g>
   </g>
 
-  <path d="M170 270H830" stroke="url(#line)"/>
-  <circle cx="500" cy="270" r="2" fill="#8B949E"/>
-
-  <text x="500" y="126" fill="#F0F6FC" text-anchor="middle"
-        font-family="Segoe UI, Inter, Arial, sans-serif" font-size="34" font-weight="600" letter-spacing="8">FELIAN</text>
-  <text x="500" y="157" fill="#8B949E" text-anchor="middle"
-        font-family="Consolas, SFMono-Regular, monospace" font-size="11" letter-spacing="3">SYSTEMS / RUNTIME / NETWORK</text>
-  <text x="500" y="286" fill="#484F58" text-anchor="middle"
-        font-family="Consolas, SFMono-Regular, monospace" font-size="9" letter-spacing="4">ENGINEERING CLOSE TO THE METAL</text>
+  <path d="M24 .5H1176L1199.5 24V336L1176 359.5H24L.5 336V24L24 .5Z" stroke="#30363D"/>
 </svg>
