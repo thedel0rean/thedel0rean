@@ -1,16 +1,52 @@
-## Hi there 👋
+<div align="center">
 
+<img src="./assets/header.svg" width="100%" alt="Felian — Low-Level and Systems Developer" />
 
-**thedel0rean/thedel0rean** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+<br />
 
-Here are some ideas to get you started:
+<code>LOW-LEVEL</code>&nbsp;&nbsp;&nbsp;<code>WINDOWS</code>&nbsp;&nbsp;&nbsp;<code>RUNTIME</code>&nbsp;&nbsp;&nbsp;<code>NETWORKING</code>
 
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
+</div>
 
+<br />
+
+## About
+
+I build software close to the system: native runtimes, Windows internals,
+networked architectures, real-time interfaces and audio pipelines.
+
+My work is grounded in a simple idea — understand the whole system, keep the
+architecture explicit, and make every abstraction earn its place.
+
+<br />
+
+## Skills
+
+```text
+SYSTEMS     C++ · Low-Level Development · Windows Internals · WinAPI
+RUNTIME     Reverse Engineering · DLL · Memory · Runtime Development
+NETWORK     Client–Server Architecture · Networking
+GRAPHICS    UI · Graphics · Dear ImGui
+SCRIPTING   Lua · sol2 · LuaJIT
+AUDIO       Audio · DSP · Real-Time Processing
+```
+
+<br />
+
+## Principles
+
+```cpp
+namespace felian {
+    constexpr auto understand = "the system, not only the abstraction";
+    constexpr auto measure    = "before optimizing";
+    constexpr auto build      = "fast, reliable, explicit";
+}
+```
+
+<br />
+
+<div align="center">
+
+<sub>FROM MEMORY TO INTERFACE — BUILT AS ONE SYSTEM</sub>
+
+</div>
