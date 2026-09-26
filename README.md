@@ -14,8 +14,9 @@
 
 <div align="center">
 
-<img width="49%" src="https://github-readme-stats.vercel.app/api?username=thedel0rean&amp;show_icons=false&amp;hide_rank=true&amp;include_all_commits=true&amp;count_private=true&amp;custom_title=ENGINEERING%20METRICS&amp;bg_color=0D1117&amp;title_color=F0F6FC&amp;text_color=8B949E&amp;border_color=30363D&amp;border_radius=0" alt="thedel0rean GitHub statistics" />
-<img width="49%" src="https://github-readme-stats.vercel.app/api/top-langs/?username=thedel0rean&amp;layout=compact&amp;langs_count=6&amp;custom_title=LANGUAGE%20DISTRIBUTION&amp;bg_color=0D1117&amp;title_color=F0F6FC&amp;text_color=8B949E&amp;border_color=30363D&amp;border_radius=0" alt="thedel0rean most used languages" />
+<img width="100%" src="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=thedel0rean&amp;theme=github_dark" alt="thedel0rean contribution statistics" />
+<img width="49%" src="https://github-profile-summary-cards.vercel.app/api/cards/stats?username=thedel0rean&amp;theme=github_dark" alt="thedel0rean GitHub statistics" />
+<img width="49%" src="https://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username=thedel0rean&amp;theme=github_dark" alt="thedel0rean languages by repository" />
 
 </div>
 
