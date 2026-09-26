@@ -1,0 +1,54 @@
+<svg width="1000" height="300" viewBox="0 0 1000 300" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="line" x1="180" y1="0" x2="820" y2="0" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#30363D" stop-opacity="0"/>
+      <stop offset="0.5" stop-color="#8B949E"/>
+      <stop offset="1" stop-color="#30363D" stop-opacity="0"/>
+    </linearGradient>
+    <radialGradient id="halo">
+      <stop stop-color="#58A6FF" stop-opacity="0.12"/>
+      <stop offset="1" stop-color="#58A6FF" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="glow" x="-100%" y="-100%" width="300%" height="300%">
+      <feGaussianBlur stdDeviation="4" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <circle cx="500" cy="135" r="132" fill="url(#halo)">
+    <animate attributeName="r" values="118;132;118" dur="8s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="0.55;1;0.55" dur="8s" repeatCount="indefinite"/>
+  </circle>
+
+  <g transform="translate(500 135)" stroke="#30363D">
+    <circle r="104" stroke-width="1" stroke-dasharray="2 9">
+      <animateTransform attributeName="transform" type="rotate" from="0" to="360" dur="45s" repeatCount="indefinite"/>
+    </circle>
+    <circle r="82" stroke-width="1" stroke-dasharray="24 10 2 10">
+      <animateTransform attributeName="transform" type="rotate" from="360" to="0" dur="32s" repeatCount="indefinite"/>
+    </circle>
+    <circle r="60" stroke="#484F58" stroke-width="1"/>
+
+    <g>
+      <animateTransform attributeName="transform" type="rotate" from="0" to="360" dur="12s" repeatCount="indefinite"/>
+      <circle cy="-104" r="3.5" fill="#58A6FF" stroke="none" filter="url(#glow)"/>
+    </g>
+    <g>
+      <animateTransform attributeName="transform" type="rotate" from="360" to="0" dur="18s" repeatCount="indefinite"/>
+      <circle cy="-82" r="2.5" fill="#8B949E" stroke="none"/>
+    </g>
+  </g>
+
+  <path d="M170 270H830" stroke="url(#line)"/>
+  <circle cx="500" cy="270" r="2" fill="#8B949E"/>
+
+  <text x="500" y="126" fill="#F0F6FC" text-anchor="middle"
+        font-family="Segoe UI, Inter, Arial, sans-serif" font-size="34" font-weight="600" letter-spacing="8">FELIAN</text>
+  <text x="500" y="157" fill="#8B949E" text-anchor="middle"
+        font-family="Consolas, SFMono-Regular, monospace" font-size="11" letter-spacing="3">SYSTEMS / RUNTIME / NETWORK</text>
+  <text x="500" y="286" fill="#484F58" text-anchor="middle"
+        font-family="Consolas, SFMono-Regular, monospace" font-size="9" letter-spacing="4">ENGINEERING CLOSE TO THE METAL</text>
+</svg>
